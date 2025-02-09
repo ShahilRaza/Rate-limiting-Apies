@@ -29,6 +29,7 @@ app.use('/todo/:id', rateLimiter);
 
 // API endpoint example
 app.get('/todo/:id', (c) => {
+  console.log("hello sharuq khan")
   const todoId = c.req.param('id');
   return c.json({
     id: todoId,
@@ -36,6 +37,7 @@ app.get('/todo/:id', (c) => {
     description: 'This is a sample todo',
     completed: false,
   });
+ 
 });
 
 export default app;
